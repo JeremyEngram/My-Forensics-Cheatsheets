@@ -1,0 +1,29 @@
+    Scanning for live hosts:
+        nmap -sn 192.168.1.0/24: Scan a network to identify live hosts. This sends an ICMP echo request to each host in the specified IP range and reports back which hosts are up.
+        ping 192.168.1.1: Check if a single host is live. This sends an ICMP echo request to the specified IP address and reports back if it receives a response.
+
+    Port scanning:
+        nmap -p- 192.168.1.1: Scan all ports on a single host. This scans all 65,535 TCP and UDP ports on the specified IP address.
+        nmap -sS -A 192.168.1.1: Scan a single host with service and OS detection. This performs a SYN scan (-sS) to identify open TCP ports and attempts to determine the OS and service information (-A).
+        nmap -sS -A -p- 192.168.1.1: Scan all ports on a single host with service and OS detection. This performs a SYN scan on all ports (-p-) and attempts to determine the OS and service information.
+        masscan -p0-65535 192.168.1.0/24: High-speed port scanner. This scans all 65,535 TCP and UDP ports on all hosts in the specified IP range at a high rate of speed.
+
+    Service enumeration:
+        nmap -sV 192.168.1.1: Identify services running on a host. This performs a version scan (-sV) to determine the version and type of service running on each open TCP port.
+        enum4linux -a 192.168.1.1: Enumerate Windows/Samba systems. This tool is used to gather information about Windows and Samba hosts, including user names, shares, and more.
+
+    Web application enumeration:
+        nikto -h 192.168.1.1: Scan a web server for known vulnerabilities. This tool performs a comprehensive scan of a web server and reports back any known vulnerabilities.
+        dirb http://192.168.1.1: Enumerate web directories and files. This tool is used to brute force web directories and files on a web server.
+        gobuster dir -u http://192.168.1.1 -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt: Brute force web directories and files. This tool is similar to dirb, but uses a different approach to brute forcing.
+
+    Email enumeration:
+        theharvester -d example.com -l 500 -b all: Enumerate email addresses and other information from a domain. This tool is used to gather information about a domain, including email addresses, hosts, and more.
+
+    DNS enumeration:
+        nslookup -type=mx example.com: Identify mail servers for a domain. This tool is used to identify the mail servers for a domain.
+        dnsrecon -d example.com -t axfr: Perform a DNS zone transfer. This tool is used to perform a zone transfer on a DNS server, which can reveal additional information about the domain.
+        dnsenum example.com: Enumerate DNS information for a domain. This tool is used to gather information about a domain's DNS servers, including hostnames, IP addresses, and more.
+
+    Wireless network enumeration:
+        airodump-ng wlan0: Capture wireless network traffic
