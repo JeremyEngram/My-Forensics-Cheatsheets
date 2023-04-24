@@ -1,0 +1,61 @@
+
+    Wireshark:
+        Wireshark is a network protocol analyzer that can capture and analyze network traffic.
+
+    To use Wireshark:
+        Launch Wireshark by typing "wireshark" in the terminal.
+        Select the network interface you want to capture traffic on.
+        Start the capture and wait for traffic to appear.
+        Analyze the captured traffic using the Wireshark interface.
+
+    Ettercap:
+        Ettercap is a network sniffer and MITM (Man in the Middle) attack tool.
+
+    To use Ettercap:
+        Launch Ettercap by typing "ettercap" in the terminal.
+        Select the network interface you want to use.
+        Use the "Hosts" menu to select the target host.
+        Use the "Mitm" menu to select the type of MITM attack you want to perform.
+        Use the "Sniff" menu to start capturing traffic.
+
+    Bettercap:
+        Bettercap is a network sniffer and MITM attack tool that supports advanced capabilities such as SSL stripping.
+
+    To use Bettercap:
+        Launch Bettercap by typing "bettercap" in the terminal.
+        Select the network interface you want to use.
+        Use the "net.probe on" command to scan the network for hosts.
+        Use the "set arp.spoof.targets" command to select the target host.
+        Use the "set arp.spoof.fullduplex true" command to enable full-duplex ARP spoofing.
+        Use the "set sniff.remote true" command to enable remote sniffing.
+        Use the "set sslstrip.bypass true" command to enable SSL stripping.
+
+    Tcpdump:
+        Tcpdump is a command-line network sniffer that can capture and analyze network traffic.
+
+    To use Tcpdump:
+        Launch Tcpdump by typing "tcpdump" in the terminal.
+        Use the "-i" option to select the network interface you want to use.
+        Use the "-n" option to disable name resolution.
+        Use the "-s" option to set the snap length for captured packets.
+        Use the "-w" option to write captured packets to a file.
+
+    Scapy:
+        Scapy is a Python-based network sniffer and packet manipulation tool.
+
+    To use Scapy:
+        Launch Scapy by typing "scapy" in the terminal.
+        Use the "sniff" function to capture network traffic.
+        Use the "send" function to send packets to a target host.
+        Use the "sr" function to send packets and receive responses from a target host.
+
+    Hping3:
+        Hping3 is a command-line packet crafting and network probing tool.
+
+    To use Hping3:
+        Launch Hping3 by typing "hping3" in the terminal.
+        Use the "-c" option to specify the number of packets to send.
+        Use the "-i" option to specify the interval between packets.
+        Use the "-S" option to send TCP SYN packets.
+        Use the "-a" option to set the source IP address.
+        Use the "-p" option to specify the destination port.
