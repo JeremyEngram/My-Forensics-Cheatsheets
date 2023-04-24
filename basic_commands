@@ -1,0 +1,48 @@
+Sure, here's another Kali Linux cheatsheet for digital forensics with command line string examples:
+
+    Navigating the File System:
+        cd /path/to/directory: change directory
+        ls: list directory contents
+        pwd: print working directory
+        file /path/to/file: determine file type
+
+    Searching for files:
+        find / -name "filename": search for files and directories
+        grep "searchterm" /path/to/file: search for specific patterns within files
+        strings /path/to/binaryfile: extract printable strings from binary files
+        hexdump -C /path/to/file: display hexadecimal and ASCII representation of files
+
+    Analyzing file metadata:
+        stat /path/to/file: display file or file system status
+        file /path/to/file: determine file type
+        exiftool /path/to/image_or_audio_file: display metadata from image and audio files
+
+    Analyzing network traffic:
+        tcpdump -i eth0: capture and analyze network traffic
+        wireshark: graphical tool for analyzing network traffic
+        netsniff-ng -i eth0: perform protocol analysis and network debugging
+
+    Recovering deleted files:
+        foremost -i /path/to/image -o /output/folder/: recover files based on file type headers
+        scalpel /path/to/image -o /output/folder/: recover files based on file type signatures
+        testdisk /path/to/image: recover lost partitions and file systems
+
+    Analyzing system memory:
+        volatility -f /path/to/memorydump image pslist: analyze memory dumps for forensic evidence
+        strings -a /path/to/memorydump: extract printable strings from memory dumps
+
+    Analyzing malware:
+        malwarebytes -Scan -r /path/to/folder: scan for and remove malware
+        yara /path/to/rules /path/to/malware: write rules to identify malware
+        ida /path/to/malware: analyze malware binaries
+
+    Password cracking:
+        john --wordlist=/path/to/wordlist --format=nt /path/to/hashes.txt: perform password cracking attacks
+        hashcat -m 0 /path/to/hashes.txt /path/to/wordlist: perform advanced password cracking attacks
+
+    Other tools:
+        dd if=/dev/sda of=/path/to/diskimage: create disk images
+        dc3dd if=/dev/sda hash=md5 of=/path/to/diskimage: create disk images with added hashing features
+        autopsy: graphical tool for digital forensics
+
+Note: These are just a few examples of the many command line strings available in Kali Linux for digital forensics. It's important to choose the appropriate string for the task at hand, and to use them responsibly and legally.
